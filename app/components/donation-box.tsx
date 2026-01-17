@@ -36,7 +36,7 @@ export default function DonationBox({ lang }: { lang: keyof typeof I18N }) {
     return (
         <div className="w-full flex justify-center p-4">
             <div className="text-center">
-                <p className="text-lg font-bold mb-2">Donations</p>
+                <p className="text-lg font-bold mb-2 text-gray-100">Donations</p>
 
                 <Image
                     src={btcQR}

@@ -153,15 +153,7 @@ export default function App() {
   return (
     <div>
       <SelectLanguage lang={lang} setLang={setLang} />
-      <div
-        style={{
-          maxWidth: 980,
-          margin: "0 auto",
-          padding: 18,
-          fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
-        }}
-        className="text-gray-800"
-      >
+      <div className="mx-auto w-full max-w-245 px-4 sm:px-6 py-6 text-gray-800">
         <h1 style={{ margin: "8px 0 4px" }} className="text-gray-300 text-2xl">
           {t.title}
         </h1>
@@ -169,23 +161,11 @@ export default function App() {
           {t.subtitle}
         </p>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 16,
-            alignItems: "start",
-          }}
-        >
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-start">
+
           {/* LEFT */}
-          <div
-            style={{
-              padding: 16,
-              border: "1px solid #eee",
-              borderRadius: 16,
-              background: "#fff",
-            }}
-          >
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5">
+
             <h2 style={{ marginTop: 0 }}>Checklist</h2>
 
             <Select
@@ -240,7 +220,7 @@ export default function App() {
                 {t.adjustWeightsHint}
               </p>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {weightFields.map((k) => (
                   <WeightInput
                     key={k}
@@ -263,14 +243,7 @@ export default function App() {
           </div>
 
           {/* RIGHT */}
-          <div
-            style={{
-              padding: 16,
-              border: "1px solid #eee",
-              borderRadius: 16,
-              background: "#fff",
-            }}
-          >
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5">
             <h2 style={{ marginTop: 0 }}>{t.result}</h2>
 
             <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
